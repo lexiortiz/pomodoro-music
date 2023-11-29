@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* adjust typography defaults */
+  body {
+    margin: 1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: var(--pomodoro);
+    transition: background-color 1s ease;
+  }
+  
+  :root {
+    --pomodoro: #64A699;
+    --shortBreak: #c3894ad0;
+    --longBreak: #8E7DBE;
+  }
+  
+  /* images and videos max out at full width */
+  img,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  progress {
+    border-radius: 2px;
+    width: 100%;
+    height: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: hsl(0, 0%, 92%);
+  }
+  
+  .timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    color: hsl(323, 24%, 92%);
+  }
+  
+  .clock {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 15rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-family: arial, sans-serif;
+  }
+  
+  .mode-button {
+    font-size: 1.2rem;
+    height: 28px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 300;
+    color: hsl(323, 24%, 92%);
+    border: 1px solid transparent;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 2px 12px;
+    background: none;
+  }
+  
+  .mode-button.active {
+    border-color: hsl(0, 0%, 92%);
+  }
+  
+  .main-button {
+    cursor: pointer;
+    box-shadow: rgb(166, 166, 166) 0px 6px 0px;
+    font-size: 22px;
+    height: 55px;
+    text-transform: uppercase;
+    color: hsl(175, 26%, 41%);
+    font-weight: bold;
+    width: 200px;
+    background-color: hsl(323, 24%, 92%);
+    border-width: initial;
+    border-style: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    transition: color 0.5s ease-in-out 0s;
+  }
+  
+  button:focus,
+  button:active {
+    outline: none;
+  }
+  
+  .main-button.active {
+    transform: translateY(6px);
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .clock {
+      font-size: 8rem;
+    }
+  }
